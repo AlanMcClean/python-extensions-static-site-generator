@@ -28,7 +28,7 @@ class Site:
 
     
     def build(self):
-        hooks.event("colllect_files", self.source, self.parsers)
+        hooks.event("collect_files", self.source, self.parsers)
         extensions.load_bundled()
         self.dest.mkdir(parents=True, exist_ok=True)
         for path in self.source.rglob("*"):
